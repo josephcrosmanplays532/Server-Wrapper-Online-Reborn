@@ -42,7 +42,7 @@ module.exports = function (req, res, url) {
 			break;
 		}
 
-		case '/cc_browser': {
+		case '/character/browser': {
 			title = 'Character Creator Browser';
 			attrs = {
 				data: process.env.SWF_URL + '/cc_browser.swf', // data: 'cc_browser_.swf',
@@ -61,7 +61,7 @@ module.exports = function (req, res, url) {
 			break;
 		}
 		
-		case '/go_full': {
+		case '/videomaker': {
 			let presave = query.movieId && query.movieId.startsWith('m') ? query.movieId :
 				`m-${fUtil[query.noAutosave ? 'getNextFileId' : 'fillNextFileId']('movie-', '.xml')}`;
 			title = 'Video Editor';
